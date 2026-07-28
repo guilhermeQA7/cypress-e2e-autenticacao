@@ -29,7 +29,7 @@ describe('Cadastro de usuario', () => {
         cadastro_user_page.preencheNome('Mr Thug')//preenche o nome
         cadastro_user_page.preencheEmail('Thug@gmail.com')//preenche o email
         cadastro_user_page.clicarCadastrar()//clica em cadastrar sem preencher a senha
-        cadastro_user_page.clicarCadastrar('O campo senha deve ter pelo menos 6 dígitos')//valida a mensagem de erro do campo senha
+        cadastro_user_page.validarMensagemErro('O campo senha deve ter pelo menos 6 dígitos')//valida a mensagem de erro do campo senha
 
     })
     it('Campo Senha invalido', () => {
@@ -42,7 +42,7 @@ describe('Cadastro de usuario', () => {
     })
     it('Cadastro Com Sucesso', () => {
         cadastro_user_page.preencheNome ('Mr Thug')//preenche o nome
-        cadastro_user_page.preencheEmail ("thug@gmail.com")//preenche o email com dado aleatório do faker
+        cadastro_user_page.preencheEmail (faker.internet.email())//e-mail aleatório: o cadastro recusa endereço já usado, então o dado precisa ser novo a cada execução
         cadastro_user_page.preencheSenha ('34245023')//preenche a senha
         cadastro_user_page.clicarCadastrar ()//clica em cadastrar
         cadastro_user_page.validarMensagemSucess('Cadastro realizado!')//valida a mensagem de sucesso
