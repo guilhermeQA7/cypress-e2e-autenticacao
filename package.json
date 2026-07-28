@@ -1,13 +1,20 @@
 {
-  "name": "praticando",
+  "name": "cypress-e2e-autenticacao",
   "version": "1.0.0",
-  "description": "",
+  "description": "Suíte de testes E2E em Cypress com Page Object Model, cobrindo login e cadastro de usuário",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cypress run",
+    "cy:open": "cypress open"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "cypress",
+    "e2e",
+    "test-automation",
+    "page-object-model",
+    "qa"
+  ],
+  "author": "Guilherme Martins",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
