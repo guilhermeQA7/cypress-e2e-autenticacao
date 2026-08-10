@@ -18,6 +18,9 @@ jobs:
         with:
           node-version: 18
 
+      - name: Clear Cypress cache
+        run: npx cypress install --force
+
       - name: Install dependencies
         run: npm install
 
